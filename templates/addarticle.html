@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block body %}
+{% load crispy_forms_tags %}
+<div class="form-group">
+    <div class="form-group">
+        <h3>Makale Oluştur</h3>
+        <hr>
+        <form method = "post" enctype="multipart/form-data"> 
+         {% csrf_token %}
+         {{form|crispy}}
+         <br>
+        <button type="submit" class ="btn btn-warning">Gönder</button>
+        </form>
+    </div>
+</div>
+{% endblock body %}
